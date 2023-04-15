@@ -44,4 +44,10 @@ for word in plaintext.upper():
         ciphertext += key[first_letter] + "-"
     else:
         continue
+        
+        
+ #dekriptimi
+listaciphetext = ciphertext.split("-")
+plaintext = ""
+swapped_key = {value: key for key, value in key.items()}
 
