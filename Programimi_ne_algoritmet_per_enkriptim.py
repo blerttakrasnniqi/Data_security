@@ -13,3 +13,21 @@ if not os.path.isfile(book_file):
 else:
     with open(book_file, "r", encoding='utf-8') as f:
         book = f.read()
+        
+# Shnderrimi i tekstit ne liste qe te mund te kontrollohet fjale per fjale
+
+
+book_words = book.split(" ")
+
+key = {}
+
+
+
+# Kontrollo shkronjen e pare te cdo fjale dhe bashkangjite ne dictionary nese nuk eshte
+for word in book_words:
+    first_letter = word[0].upper()
+    if not first_letter.isalpha():
+        continue
+    if first_letter not in key:
+        key[first_letter] = str(book_words.index(word)+1).zfill(3)
+         #word_position += 1
