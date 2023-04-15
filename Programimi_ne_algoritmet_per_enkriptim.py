@@ -1,8 +1,8 @@
 import os
 
-plaintext = "The quick brown fox jumps over the lazy dog"
+plaintext = "What a curious feeling!' said Alice; `I must be shutting up like a telescope."
 
-cyphertext = "012-011-007-018-024-003-020-019-013-004-009-015-002-006-009-023-024-001-022-014-009-021-007-004-012-011-007-016-005-008-017-009-010"
+ciphertext2 = "002-011-001-004-001-041-048-034-028-008-048-009-070-107-107-145-028-019-005-009-001-028-021-001-145-028-041-107-028-064-048-009-004-003-107-009-011-048-004-004-028-019-005-048-027-145-028-432-107-001-004-107-145-107-009-041-008-027-107"
 
 book_file = "book.txt"
 
@@ -47,7 +47,7 @@ for word in plaintext.upper():
         
         
  #dekriptimi
-listaciphetext = ciphertext.split("-")
+listaciphetext = ciphertext2.split("-")
 plaintext = ""
 swapped_key = {value: key for key, value in key.items()}
 
@@ -64,10 +64,10 @@ ciphertext = ciphertext[:-1]
 
 print("Key:")
 print(key)
-print("encryption:\n")
-print("\nCiphertext:")
+print("\n\n*********************ENCRYPTION*********************\n")
+print("Ciphertext:")
 print(ciphertext)
-print("decryption:\n")
-print("\nPlaintext:")
+print("\n\n*********************DECRYPTION*********************\n")
+print("Plaintext:")
 print(plaintext)
 
