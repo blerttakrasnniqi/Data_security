@@ -30,4 +30,18 @@ for word in book_words:
         continue
     if first_letter not in key:
         key[first_letter] = str(book_words.index(word)+1).zfill(3)
-         #word_position += 1
+
+        #key[first_letter] = str(word_position).zfill(3)
+        #word_position += 1
+
+
+# enkriptimi:
+
+ciphertext = ""
+for word in plaintext.upper():
+    first_letter = word[0]
+    if first_letter in key:
+        ciphertext += key[first_letter] + "-"
+    else:
+        continue
+
