@@ -51,3 +51,23 @@ listaciphetext = ciphertext.split("-")
 plaintext = ""
 swapped_key = {value: key for key, value in key.items()}
 
+
+for number in listaciphetext:
+    if number in swapped_key:
+        plaintext += swapped_key[number]
+
+
+
+# largoje - (vizen e fundit)
+ciphertext = ciphertext[:-1]
+
+
+print("Key:")
+print(key)
+print("encryption:\n")
+print("\nCiphertext:")
+print(ciphertext)
+print("decryption:\n")
+print("\nPlaintext:")
+print(plaintext)
+
